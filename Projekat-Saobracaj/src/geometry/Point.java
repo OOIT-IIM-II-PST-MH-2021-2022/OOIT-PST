@@ -12,6 +12,38 @@ public class Point  {
 		return distance;
 	}
 	
+	@Override
+	public String toString() {
+		return "(" + this.x + ", " + this.y + ")";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Point) {
+			Point temp = (Point) obj;
+			if(this.x == temp.x && this.y == temp.y) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	//Konstruktori
+	
+	public Point() {
+		
+	}
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Point(int x, int y, boolean selected) {
+		this(x,y);
+		this.selected = selected;
+	}
+	
 	//Get i set metode
 	public int getX() {
 		return x;

@@ -53,19 +53,29 @@ public class Test {
 		//System.out.println(l1.getEndPoint().getY());
 		Point p5 = new Point(15,10,true);
 		Point p6 = new Point(15,10,true);
-		System.out.println("X je: " + p5.getX() + ", Y je: " + p5.getY()+ ", selected je: " + p5.isSelected());
+		/*System.out.println("X je: " + p5.getX() + ", Y je: " + p5.getY()+ ", selected je: " + p5.isSelected());
 		System.out.println(p5.toString());
 		System.out.println(p6);
 		System.out.println(l1);
 		System.out.println(r1);
 		System.out.println(p5 == p6);
 		System.out.println(p5.equals(p6));
-		System.out.println(l1.equals(l2));
+		System.out.println(l1.equals(l2));*/
 		l2.setStartPoint(p1);
 		l2.setEndPoint(p2);
-		System.out.println(l1 == l2);
-		System.out.println(l1.equals(l2));
+		/*System.out.println(l1 == l2);
+		System.out.println(l1.equals(l2));*/
 		
+		//Vezbe 5
+		l1.setStartPoint(new Point(0,25));
+		l1.setEndPoint(new Point(0,23));
+		System.out.println(l1.contains(0, 23));
+		r1.setUpperLeft(new Point(10,10));
+		r1.setWidth(20);
+		r1.setHeight(15);
+		System.out.println(r1.contains(20, 30));
+		Circle c2 = new Circle();
+		c2.setCenter(p6);
 	}
 
 }

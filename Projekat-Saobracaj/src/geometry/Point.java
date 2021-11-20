@@ -28,6 +28,10 @@ public class Point  {
 		return false;
 	}
 	
+	public boolean contains(int x, int y) {
+		return distance(new Point(x,y)) <= 2; 
+	}
+	
 	//Konstruktori
 	
 	public Point() {

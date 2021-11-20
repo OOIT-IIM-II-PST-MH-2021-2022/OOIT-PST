@@ -32,6 +32,15 @@ public class Rectangle {
 		return false;
 	}
 	
+	public boolean contains(int x, int y) {
+		return this.upperLeft.getX() <= x && this.upperLeft.getX()+width >= x
+				&& this.upperLeft.getY()<= y && this.upperLeft.getY()+height >= y;
+	}
+	
+	public boolean contains(Point p) {
+		return contains(p.getX(), p.getY());
+	}
+	
 	//Konstruktori
 	
 	public Rectangle() {

@@ -1,11 +1,12 @@
 package geometry;
 
-public class Rectangle {
+import java.awt.Graphics;
+
+public class Rectangle extends Shape {
 
 	private Point upperLeft;
 	private int height;
 	private int width;
-	private boolean selected;
 	
 	public int area() {
 		return height*width;
@@ -32,6 +33,7 @@ public class Rectangle {
 		return false;
 	}
 	
+	@Override
 	public boolean contains(int x, int y) {
 		return this.upperLeft.getX() <= x && this.upperLeft.getX()+width >= x
 				&& this.upperLeft.getY()<= y && this.upperLeft.getY()+height >= y;
@@ -39,6 +41,11 @@ public class Rectangle {
 	
 	public boolean contains(Point p) {
 		return contains(p.getX(), p.getY());
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		g.drawRect(this.upperLeft.getX(), this.upperLeft.getY(), width, height);
 	}
 	
 	//Konstruktori
@@ -77,12 +84,5 @@ public class Rectangle {
 	public void setWidth(int width) {
 		this.width = width;
 	}
-	public boolean isSelected() {
-		return selected;
-	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
-	
 	
 }

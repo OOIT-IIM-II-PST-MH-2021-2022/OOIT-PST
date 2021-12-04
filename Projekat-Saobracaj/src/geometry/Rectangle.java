@@ -48,6 +48,27 @@ public class Rectangle extends Shape {
 		g.drawRect(this.upperLeft.getX(), this.upperLeft.getY(), width, height);
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		/*upperLeft.setX(x);
+		upperLeft.setY(y);*/
+		upperLeft.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		upperLeft.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Rectangle) {
+			return area() - ((Rectangle)o).area();
+		}
+		return 0;
+	}
+
+	
 	//Konstruktori
 	
 	public Rectangle() {
@@ -84,5 +105,8 @@ public class Rectangle extends Shape {
 	public void setWidth(int width) {
 		this.width = width;
 	}
+
+	
+	
 	
 }

@@ -74,8 +74,17 @@ public class Test {
 		r1.setWidth(20);
 		r1.setHeight(15);
 		System.out.println(r1.contains(20, 30));
-		Circle c2 = new Circle();
-		c2.setCenter(p6);
+		Circle c2 = new Circle(p6, 80);
+		
+		//Vezbe 7
+		System.out.println("Vezbe 7: p1.x = " + p1.getX()+ " i p1.y  = " + p1.getY());
+		p1.moveTo(50, 40);
+		System.out.println("Vezbe 7 posle pomeranja: p1.x = " + p1.getX()+ " i p1.y  = " + p1.getY());
+		Donut d1 = new Donut(new Point(50,50), 80, 50);
+		System.out.println("Compare to za Donut: " + d1.compareTo(c2));
+		System.out.println("Compare to za Circle: " + c1.compareTo(d1));
+		Circle c3 = new Donut(new Point(50,50),100,50);
+		System.out.println("Compare to za Donut: " + d1.compareTo(c3));
 	}
 
 }

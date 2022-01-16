@@ -93,8 +93,14 @@ public class Circle extends Shape {
 		return radius;
 	}
 	
-	public void setRadius(int radius) {
-		this.radius =  radius;
+	public void setRadius(int radius) throws Exception {
+		if(radius > 0) {
+			this.radius =  radius;
+		}
+		else {
+			throw new NumberFormatException("Radius mora biti pozitivan broj!");
+		}
+		
 	}
 
 	

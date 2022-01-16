@@ -1,5 +1,6 @@
 package geometry;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Point extends Shape {
@@ -38,6 +39,10 @@ public class Point extends Shape {
 	public void draw(Graphics g) {
 		g.drawLine(x-2, y, x+2, y);
 		g.drawLine(x, y-2, x, y+2);
+		if(selected) {
+			g.setColor(Color.BLUE);
+			g.drawRect(x-3, y-3, 6, 6);
+		}
 	}
 	
 	@Override

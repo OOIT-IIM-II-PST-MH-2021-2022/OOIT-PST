@@ -2,7 +2,7 @@ package geometry;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		Point p1 = new Point();
 		//System.out.println("X je: " + p1.getX());
 		p1.setX(12);
@@ -45,7 +45,6 @@ public class Test {
 		
 		Circle c1 = new Circle();
 		c1.setCenter(p2);
-		c1.setRadius(10);
 		//System.out.println(c1.area());
 		//System.out.println(c1.circumference());
 		
@@ -85,6 +84,15 @@ public class Test {
 		System.out.println("Compare to za Circle: " + c1.compareTo(d1));
 		Circle c3 = new Donut(new Point(50,50),100,50);
 		System.out.println("Compare to za Donut: " + d1.compareTo(c3));
+		
+		//Vezbe 8
+		try {
+			c1.setRadius(0);
+		} catch (Exception e) {
+			System.out.println("Radius mora biti veci od 0!");
+		}
+		
+		System.out.println("Cao");
 	}
 
 }

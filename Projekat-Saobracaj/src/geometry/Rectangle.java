@@ -1,5 +1,6 @@
 package geometry;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Rectangle extends Shape {
@@ -45,7 +46,13 @@ public class Rectangle extends Shape {
 	
 	@Override
 	public void draw(Graphics g) {
+		if(getColor() == null){
+			g.setColor(Color.BLACK);
+		}else {
+			g.setColor(super.getColor());
+		}
 		g.drawRect(this.upperLeft.getX(), this.upperLeft.getY(), width, height);
+		g.fillRect(this.upperLeft.getX(), this.upperLeft.getY(), width, height);
 	}
 	
 	@Override

@@ -1,5 +1,6 @@
 package geometry;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Circle extends Shape {
@@ -43,6 +44,11 @@ public class Circle extends Shape {
 	
 	@Override
 	public void draw(Graphics g) {
+		if(getColor() == null){
+			g.setColor(Color.BLACK);
+		}else {
+			g.setColor(super.getColor());
+		}
 		g.drawOval(center.getX()-radius, center.getY()-radius, radius*2, radius*2);
 	}
 	

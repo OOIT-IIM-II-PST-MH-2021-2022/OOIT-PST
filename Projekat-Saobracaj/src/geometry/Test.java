@@ -1,9 +1,12 @@
 package geometry;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Test {
 
 	public static void main(String[] args)  {
-		Point p1 = new Point();
+		/*Point p1 = new Point();
 		//System.out.println("X je: " + p1.getX());
 		p1.setX(12);
 		p1.setY(30);
@@ -59,11 +62,11 @@ public class Test {
 		System.out.println(r1);
 		System.out.println(p5 == p6);
 		System.out.println(p5.equals(p6));
-		System.out.println(l1.equals(l2));*/
+		System.out.println(l1.equals(l2));
 		l2.setStartPoint(p1);
 		l2.setEndPoint(p2);
 		/*System.out.println(l1 == l2);
-		System.out.println(l1.equals(l2));*/
+		System.out.println(l1.equals(l2));
 		
 		//Vezbe 5
 		l1.setStartPoint(new Point(0,25));
@@ -92,7 +95,28 @@ public class Test {
 			System.out.println("Radius mora biti veci od 0!");
 		}
 		
-		System.out.println("Cao");
+		System.out.println("Cao");*/
+		
+		//Primer projekta
+		Rectangle rec1 = new Rectangle(20,20,new Point(0,0));
+		Rectangle rec2 = new Rectangle(15,15,new Point(0,0));
+		Rectangle rec3 = new Rectangle(30,30,new Point(0,0));
+		ArrayList<Rectangle> rectangles = new ArrayList<Rectangle>();
+		rectangles.add(rec1);
+		rectangles.add(rec2);
+		rectangles.add(rec3);
+		System.out.println("Nesortiran prikaz");
+		for(Rectangle r : rectangles) {
+			System.out.println(r);
+		}
+		Rectangle[] rectanglesArray = (Rectangle[]) rectangles.toArray();
+		Arrays.sort(rectanglesArray);
+		System.out.println("Sortiran prikaz");
+		for(Rectangle r : rectangles) {
+			System.out.println(r);
+		}
+		
+		
 	}
 
 }

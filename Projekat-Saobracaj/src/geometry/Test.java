@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Test {
 
 	public static void main(String[] args)  {
-		/*Point p1 = new Point();
+		Point p1 = new Point();
 		//System.out.println("X je: " + p1.getX());
 		p1.setX(12);
 		p1.setY(30);
@@ -55,7 +55,7 @@ public class Test {
 		//System.out.println(l1.getEndPoint().getY());
 		Point p5 = new Point(15,10,true);
 		Point p6 = new Point(15,10,true);
-		/*System.out.println("X je: " + p5.getX() + ", Y je: " + p5.getY()+ ", selected je: " + p5.isSelected());
+		System.out.println("X je: " + p5.getX() + ", Y je: " + p5.getY()+ ", selected je: " + p5.isSelected());
 		System.out.println(p5.toString());
 		System.out.println(p6);
 		System.out.println(l1);
@@ -65,7 +65,7 @@ public class Test {
 		System.out.println(l1.equals(l2));
 		l2.setStartPoint(p1);
 		l2.setEndPoint(p2);
-		/*System.out.println(l1 == l2);
+		System.out.println(l1 == l2);
 		System.out.println(l1.equals(l2));
 		
 		//Vezbe 5
@@ -95,7 +95,7 @@ public class Test {
 			System.out.println("Radius mora biti veci od 0!");
 		}
 		
-		System.out.println("Cao");*/
+		System.out.println("Cao");
 		
 		//Primer projekta
 		Rectangle rec1 = new Rectangle(20,20,new Point(0,0));
@@ -109,14 +109,15 @@ public class Test {
 		for(Rectangle r : rectangles) {
 			System.out.println(r);
 		}
-		Rectangle[] rectanglesArray = (Rectangle[]) rectangles.toArray();
-		Arrays.sort(rectanglesArray);
+		Rectangle[] tempArray = new Rectangle[1];
+		Rectangle[] rectangleArray = rectangles.toArray(tempArray);
+		Arrays.sort(rectangleArray);
 		System.out.println("Sortiran prikaz");
-		for(Rectangle r : rectangles) {
+		for(Rectangle r : rectangleArray) {
 			System.out.println(r);
 		}
 		
 		
 	}
-
 }
+

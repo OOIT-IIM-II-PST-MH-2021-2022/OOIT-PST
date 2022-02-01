@@ -78,6 +78,7 @@ public class FrmKrugovi extends JFrame {
 					if(dlg.getCheck() == 3) {
 						Circle c1 = new Circle(new Point(-1,-1), Integer.parseInt(dlg.getTextField().getText()));
 						dlm.addElement(c1);
+						dlm.add(0, c1);
 						lblBrojac.setText("Krugova u listi: " + dlm.getSize());
 					}
 					

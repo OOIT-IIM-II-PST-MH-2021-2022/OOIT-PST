@@ -50,6 +50,12 @@ public class Circle extends Shape {
 			g.setColor(super.getColor());
 		}
 		g.drawOval(center.getX()-radius, center.getY()-radius, radius*2, radius*2);
+		if(this.isSelected()) {
+            g.drawRect(this.getCenter().getX() - this.radius - 3, this.getCenter().getY() - 3, 6, 6);
+            g.drawRect(this.getCenter().getX() - 3, this.getCenter().getY() + this.radius - 3, 6, 6);
+            g.drawRect(this.getCenter().getX() + this.radius - 3, this.getCenter().getY() - 3, 6, 6);
+            g.drawRect(this.getCenter().getX() - 3, this.getCenter().getY() - this.radius - 3, 6, 6);
+        }
 	}
 	
 	@Override
